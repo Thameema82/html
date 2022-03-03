@@ -1,0 +1,25 @@
+#d1{
+	text-align:center;
+	background-color: lightskyblue;
+	padding:2px;
+	color:black;
+}
+#d2{
+	background-color: green;
+	background-position: left;
+
+	padding:20px;
+}
+#d3{
+	background-color: cyan;
+	background-position: right;
+	
+
+}
+.ab{
+	background-color: grey;
+
+	padding:5%;
+
+	
+}

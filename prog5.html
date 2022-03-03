@@ -1,0 +1,164 @@
+<html>
+<head><title>Tables in html prog5</title>
+	<style>
+	
+	
+		.table2{
+			 width: 600px;
+			 border-collapse: collapse;
+		 }	
+		 th{
+			 border-bottom:1px solid ;
+		 }
+		 #td5{
+			 border-bottom: 1px solid;
+		 }	
+		 table,th,td{
+		text-align: left;
+		border:1px solid black;
+		padding:4px;
+		border-collapse: collapse;
+	}
+			
+		</style>
+	</head>
+	<body>
+		<center>
+			<table style="width:55%"><caption>TABLES</caption>
+				<tr>
+					<td>FKANS001</td>
+				    <td align="right">254</td>
+					<td>ADHILA P M</td>
+				</tr>
+				<tr>
+					<td>FKANS002</td>
+					<td align="right">255</td>
+					<td>ADHIKA K</td>
+				</tr>
+				<tr>
+					<td>FKANS002</td>
+					<td align="right">255</td>
+					<td>DILSHA T</td>
+				</tr>
+			</table>
+			<p>Tables can be created in HTML using <b>&lt;TABLE &gt;</b>tag.Row and columns of the table are specified using <b>&lt; row &gt;</b>and <b> &lt; col &gt;</b> elements .You can prepare simple table to represent the timimgs of the above image.</p></center>
+			<h2>Giving Headings,Borders,Captions and width of the Table and cells</h2>
+			<center>
+			<table style="width:50%">
+				<caption>List of students- BSc CS 2013-16</caption>
+				<tr >
+					<th>Reg No</th>
+					<th>Roll No</th>
+					<th>Name</th>
+				</tr>
+                <tr>
+					<td>FKANS001</td>
+				    <td align="right">254</td>
+					<td>ADHILA P M</td>
+				</tr>
+				<tr>
+					<td>FKANS002</td>
+					<td align="right">255</td>
+					<td>ADHIKA K</td>
+				</tr>
+				<tr>
+					<td>FKANS002</td>
+					<td align="right">255</td>
+					<td>DILSHA T</td>
+				</tr>
+</table></center>
+<p>When you created the first table ,table was displayed in default attributes.Tables can be further customised .Now you know how to add headings,captions,put borders and fixing width for each cells(You may set 40% of total width for Reg No and 50% for Name and the rest for Roll No. Also the width of entire table may be fixed as 50% )</p>
+<h2>Row Spanning and column Spanning</h2>
+<p> Rows and columns can be merged for our convenience .A sample table is as shown below .In addition to this ,background  colors of cells are also customised</p>
+<center>
+<table style= "width :70% " style="border-color:solid forestgreen">
+	<caption><h2 style ="color:red">List of UG Students-2013-16</h2></caption>
+	<tr>
+		<th colspan="4">Department of Computer Science </th>
+	</tr>
+	<tr>
+		<th colspan=4>Farook College</th>
+	</tr>
+	<tr>
+		<th align="left">Course</th>
+		<th align="left">Reg No</th>
+        <th align="left">Roll No</th>
+        <th align="left">Name</th>
+    </tr>
+    <tr>
+       <td rowspan=3 style="background-color:lightskyblue"> Computer Science</td>
+       <td style="background-color:lightskyblue">FKANSSCS001</td>
+       <td style="background-color:lightskyblue" align="right">254</td>
+       <td style="background-color:lightskyblue">ADHILA P M</td>
+   </tr>
+       <tr>
+       	<td>FKANSSCS002</td>
+       	<td align="right"> 255</td>
+       	<td>ADHIKA K</td>
+       </tr>
+       <tr>
+       <td style="background-color:lightskyblue">FKANSSCS003</td>
+       <td style="background-color:lightskyblue" align="right">257</td>
+       <td style="background-color:lightskyblue">DILSHA T</td>
+   </tr>
+   <tr>
+       <td rowspan=3 style="background-color:yellowgreen"> Physics</td>
+       <td style="background-color:yellowgreen">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+       <td style="background-color:yellowgreen" >&nbsp;&nbsp;&nbsp;&nbsp;</td>
+       <td style="background-color:yellowgreen">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+   </tr>
+   <tr> 
+   	<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+   	<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+   	<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+   </tr>
+   <tr>
+       <td style="background-color:yellowgreen">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+       <td style="background-color:yellowgreen" >&nbsp;&nbsp;&nbsp;&nbsp;</td>
+       <td style="background-color:yellowgreen">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+   </tr>
+	</table></center>
+	<br>
+	<br>
+	Customized Borders-rules Attributes 
+	<br><br>
+	<center>
+		<table class="table2">
+			<tr>
+				<th style="border-bottom:1px;></th>
+				<th style="border-bottom: 1px;></th> 
+				<th></th>
+				<th></th>    
+	    	</tr>
+           <tr>
+           	<th align="left" rowspan=2 style="vertical-align: text-top;">SI No</th>
+           	<th align="left" rowspan=2 style="vertical-align: text-top;">Course</th>
+           	<th colspan=2> Strength</th>
+           </tr>
+           <tr>
+           	<th >Boys</th>
+           	<th >Girls</th>
+           </tr>
+           <tr>
+           	<td id ="td5" align="left">1</td>
+           	<td  id ="td5" align="left">BSc Computer Science</td>
+           	<td id ="td5" align="right">10</td>
+           	<td id ="td5" align="right">20</td>
+           </tr>
+           <tr>
+           	<td  id ="td5"align="left">2</td>
+           	<td  id ="td5"align="left">BSc Physics</td>
+           	<td  id ="td5"align="right">25</td>
+           	<td  id ="td5"align="right">5</td>
+           </tr>
+           <tr>
+           	<td id ="td5" align="left">3</td>
+           	<td  id ="td5"align="left">BSc Zoology</td>
+           	<td id ="td5" align="right">0</td>
+           	<td  id ="td5"align="right">30</td>
+           </tr>
+          </table></center><br>
+          <div>"rules" attributes  can be used to specify the border lines selectively for the entire table ,rows or columns. Further customization are possible for tables </div>
+          
+</body></html>
+		

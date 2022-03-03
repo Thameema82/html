@@ -1,0 +1,83 @@
+<html>
+<head>
+<title> check</title><style>
+	table{
+		border:2px solid black;
+        background-color:lightgreen;
+	}</style>
+</head>
+<body><center>
+	 <form name="form1" action="#" onsubmit="return validate()">
+	 	<table style="width:25% "><br>
+	 		<tr><th colspan=2><b>FORM</b><br><br></th></tr>
+	     <tr><th>Name      </th><th align="left"><input type="text" name="name"><br><br></th></tr>
+	     <tr><th>Age       </th><th align="left"><input type="text" name="age"><br><br></th></tr>
+	 	 <tr><th>Mobile No </th><th align="left"><input type="text" name="mob" ><br><br></th></tr>
+	     <tr><th>E-mail    </th><th align="left"><input type="text" name="email" ><br><br></th></tr>
+         <tr><th>Address   </th><th align="left"><input type=" text" name="address" ><br><br></th></tr><br><br>
+         <tr><th colspan=2><input type="submit" name="submit"><br><br></th></tr></table>
+    </form></center>
+    <script type="text/javascript">
+    	function validate(){
+    		var name=document.form1.name.value;
+    		var age=document.form1.age.value;
+    		var mob=document.form1.mob.value;
+    		var email=document.form1.email.value;
+    		var address=document.form1.address.value;
+        var x=document.form1.email.value;
+        var atposition =x.indexOf("@");
+        var dotposition=x.lastIndexOf(".");
+    		if(name=="")
+    		{
+    			alert("Name can't be blank");
+    			return false;
+    		}
+    		else if(age==""){
+    			alert("Age can't be empty");
+    			return false;
+              }
+              else if(isNaN(age)){
+    			alert("Age should be a number");
+    			return false;
+
+              }
+              else if(mob==""){
+             	alert("please Enter your Mobile Number");
+             	return false;
+               }
+             else if(isNaN(mob)||mob.length!=10){
+    			alert("Mobile number should be a number and must have 10 digits");
+    			return false;
+              }
+              else if(email==""){
+              alert("please Enter your E-mail");
+              return false;
+
+               }
+             else if (atposition<1||dotposition<atposition+2||dotposition+2>=x.length){
+              validatemail();
+              return false
+             }
+
+              
+              else if(address==""){
+             	alert("please Enter your Address");
+             	return false;
+               }
+
+             else{
+              alert("Applied Successfully");
+          }
+          }
+    function validatemail(){
+    	var x=document.form1.email.value;
+    	var atposition =x.indexOf("@");
+    	var dotposition=x.lastIndexOf(".");
+    	 if(atposition<1||dotposition<atposition+2||dotposition+2>=x.length){
+    	 	alert("please enter a valid email !!!  \n(There must be a missing of @ or .)\n  position of @ : "+atposition+"\n  position of dot : " +dotposition);
+    	 	return false;
+
+    	 }
+    }      
+    	
+</script></body></html>

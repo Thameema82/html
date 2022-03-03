@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>Area and circumference </title>
+	<script type="text/javascript">
+		function area(){
+			var r = parseInt(num.value);
+			var a= 3.14*r*r;
+			alert("Area is "+a);
+
+		}
+		function circumference()
+		{
+			var r= parseInt(num.value);
+			var c= 2*3.14*r;
+			alert("circumference is " +c);
+
+		}
+	</script>
+</head>
+<body>
+	<form><center>
+		<h5 align= "center">
+			Enter Radius :
+			<input type= "text" id ="num"><br><br></h5>
+			<input type = "button" value = "AREA" onclick="area()">
+			<input type = "button" value = "CIRCUMFERENCE" onclick="circumference()">
+		</form></center>
+	</body></html>
