@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Kerala University Admissions</title>
+<link rel="stylesheet" type="text/css" href="css/univ.css">
+
+</head>
+
+<body>
+ <div class="univheader" >
+ 	<div class="univheader_inner" align="center"></div>
+ </div> 
+
+<div class="menubg">
+<div class="univmenu">
+<center>
+
+
+<div class="univ_menu">
+      <ul>
+        <li><a href="index.php"  class = 'current'>Home</a></li>
+        <li><a href="programlist.php" >Programmes</a></li> 
+
+         <li><a href="#">College </a> </li> 
+        <li><a href="pdfs/pgprospectus2022.pdf" target="_blank">Prospectus</a></li>
+<!--   <li><a href="lastindexmark.php" >Last Index Mark</a></li>-->
+
+               <li><a href="help.php" >Help</a></li>
+      </ul>
+    </div>
+<div class="scrollnews" >
+
+  
+  <marquee style="padding: 10px 0;"  onmouseover=this.stop() onmouseout=this.start() scrollAmount="3" >
+  <b><font color="#000000" face="Trebuchet MS, Arial, Helvetica, sans-serif"  > PG ONLINE ADMISSION IS STARTED!!</font></b>
+  </marquee>
+</div>
+
+    </center>
+</div>
+</div>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<title>Kerala University Admissions</title>
+<link rel="stylesheet" type="text/css" href="css/univ.css">
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+
+<script>
+
+$(function()
+{
+	$('#selectStream').change(function() 
+	{
+		var selectedStream = $("#selectStream").val();
+		$.post("other/modules.php", { selectedStreamCode: selectedStream },
+		function(data) 
+		{
+			$("#selectProgram").html(data);
+		});
+	});
+	$('#selectProgram').change(function() 
+	{
+		var selectedProgram = $("#selectProgram").val();
+		var selectedStream = $("#selectStream").val();
+	
+		$.post("other/modules.php", { selectedProgramCodeindex: selectedProgram },
+		function(data) 
+		{
+			$("#eligCriteria").html(data);
+		});
+		$.post("other/modules.php", { selectedProgramCodeindex1: selectedProgram, selectedStreamCodeIndex1: selectedStream },
+		function(data) 
+		{
+			$("#collegeListDisplay").html(data);
+		});
+		
+	});
+	
+});	
+
+
+</script>
+<script type="text/javascript">
+function openNewWindow()
+{
+	window.open("generate_chalan.php",'',"status=1, toolbar=0, scrollbars=1");
+}
+
+function frmValidateLogin()
+{
+	
+	if($('#txtApplnNo').val() == '')
+		{
+			alert('Please Enter Your Application Number to Login');	
+			return false;
+		}
+		if($('#txtPassword').val() == '')
+		{
+			alert('Please Enter Your Password to Login');	
+			return false;
+		}
+
+}
+</script>
+
+<body>
+
+
+<div class="univcontainerindexpage">
+<div class="univrightcolindexpage">
+<table width="100%" border="0" align="center" class="text" cellpadding="5" cellspacing="7">
+<tr height="10">
+<td>
+</tr>
+<tr  bgcolor="#CE6700">
+<td align="center" > <font color="#FFFFFF">QUICK LINKS AND NEWS</font></td>
+</tr>
+ </table>
+
+ <table width="100%" border="0" align="center" class="text" cellpadding="5" cellspacing="2">
+
+<!--<tr bgcolor="#FFFFFF" style="padding-left:10px;">
+          <td width="23px" valign="top"><img src="images/new.gif" /></td>
+          <td>
+
+        <font size=3 color="#0000FF">List of newly added PG courses. Click <a href="pdfs/PG_new_courses.pdf" target="_blank">here</a></font>
+        <hr size="1" color="#CCCCCC" width="100%" />
+</td>
+     </tr>
+
+   <tr bgcolor="#FFFFFF" style="padding-left:10px;">
+          <td width="23px" valign="top"><img src="images/latest_news.gif" /></td>
+          <td>
+	      
+        <font size=3 color="#0000FF">TRIAL ALLOTMENT PUBLISHED ON 23-10-2021. </a></font>
+        <hr size="1" color="#CCCCCC" width="100%" />
+</td>
+     </tr>
+
+<tr bgcolor="#FFFFFF" style="padding-left:10px;">
+          <td width="23px" valign="top"><img src="images/latest_news.gif" /></td>
+          <td>
+	      
+        <font size=3 color="#0000FF"> Last Index Mark of TRIAL ALLOTMENT <a href="lastindexmark.php" target="_blank">Click here</a> </font>
+        
+          <hr size="1" color="#CCCCCC" width="100%" />
+</td>
+     </tr>
+     
+-->
+     <tr bgcolor="#FFFFFF" style="padding-left:10px;">
+          <td width="23px" valign="top"><img src="images/latest_news.gif"/></td>
+          <td>
+	      
+        <font size=3 color="#0000FF">ONLINE ADMISSION 2022-23 FOR PG PROGRAMMES. Instructions <a href="pdfs/instructions_pg2022.pdf" target="_blank">Click here</a></font>
+        <hr size="1" color="#CCCCCC" width="100%" />
+</td>
+     </tr>
+     
+     <tr bgcolor="#FFFFFF" style="padding-left:10px;">
+            <td width="23px" valign="top"><img src="images/latest_news.gif" /></td>
+          <td>
+	      
+       <font size=3 color="#0000FF"> Last Index Mark of UG ONLINE ADMISSION 2021 <a href="lastindexmark_previousyear.php" target="_blank">Click here</a> </font>
+       <hr size="1" color="#CCCCCC" width="100%" />
+</td>
+     </tr>
+     
+   <!--  <tr bgcolor="#FFFFFF" style="padding-left:10px;">
+          <td width="23px" valign="top"><img src="images/new.gif"/></td>
+          <td>
+	      
+        <font size=3 color="#0000FF">Press Release for PG Admissions 2022-21. <a href="pressrelease.php">Click here</a> </font>
+        <hr size="1" color="#CCCCCC" width="100%" />
+</td>
+     </tr>
+
+     <tr bgcolor="#FFFFFF" style="padding-left:10px;">
+          <td width="23px" valign="top"><img src="images/new.gif"/></td>
+          <td>
+	      
+        <font size=3 color="#0000FF">Email id of the Colleges.<a href="pdfs/Emailid_pgcollege2021.pdf" target="_blank">Click here</a></font>
+        <hr size="1" color="#CCCCCC" width="100%" />
+</td>
+     </tr>
+  
+
+ <tr bgcolor="#FFFFFF" style="padding-left:10px;">
+          <td width="23px" valign="top"><img src="images/new.gif" /></td>
+          <td>
+	      
+        <font size=3 color="#0000FF">LAST DATE FOR PG ONLINE REGISTRATION IS EXTENDED TO 11-06-2019.</font>
+        <hr size="1" color="#CCCCCC" width="100%" />
+</td>
+     </tr>
+
+     <tr bgcolor="#FFFFFF" style="padding-left:10px;">
+          <td width="23px" valign="top"><img src="images/new.gif"/></td>
+          <td>
+	      
+        <font size=3 color="#0000FF">Press Release for PG Admissions 2019-20. <a href="pressrelease.php">Click here</a> </font>
+        <hr size="1" color="#CCCCCC" width="100%" />
+</td>
+     </tr>
+
+ -->
+      
+
+</table>
+
+</div>
+<div class="univleftcol">
+
+<table width="99%"> 
+<tr>
+  <td width="100%" height="80px" colspan="2" align="center" bgcolor="#FFFFFF" class="text">
+ <a href="generate_chalan.php" style="text-decoration:none;"><img src="images/regbtn.jpg" width="250" height="50" alt="Click here for Registration"></a>
+   
+    </td> 
+</tr>
+
+
+</table> 
+
+
+
+<form id="frmLogin" method="post">
+<div class="univlog">
+	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td height="2" align="center" valign="middle"></td>
+		</tr>
+		<tr>
+			<td height="2" colspan="2" valign="top"></td>
+		</tr>
+		<tr>
+			<td height="2" colspan="2" valign="top"></td>
+		</tr>
+		<tr>
+			<td height="25" colspan="2" valign="middle"></td>
+		</tr>
+		<tr>
+			<td height="44" colspan="2" align="center" valign="middle">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="37" height="25" align="right" class="text"></td>
+			<td width="228" valign="top" class="text" align="left">
+				 <font color="#666666" style="line-height:2em;">Application Number &nbsp;</font><br /><input name="txtApplnNo" type="text" id = "txtApplnNo" size="12" maxlength="6" /> </td>
+		</tr>
+		<tr>
+			<td width="37" height="8"></td>
+			<td width="228" height="8"></td>
+		</tr>
+		<tr>
+			<td width="37" height="25" align="right" class="text"></td>
+			<td height="25" class="text" width="228" align="left" ><font color="#666666" style="line-height:2em;">Password&nbsp;</font> <br /><input name="txtPassword" type="password" id="txtPassword" size="12" maxlength="10" />
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  <input type="submit" name="btnLogin" value="  Login  " onclick="return frmValidateLogin(this.form);" /></td>
+		</tr>
+		<tr>
+			<td height="15" class="text" align="center"><img src="images/blinkersmall.gif"></td>
+			<td height="15" class="text"><font size="1" color="#999999">default password is <br />
+			date of birth in dd/mm/yyyy format</font></td>
+		</tr>
+		<tr>
+			<td height="25" align="right" valign="bottom"><!-- <a href="#">Forget Password</a>--></td>
+			<td height="25" align="right" valign="bottom"></td>
+		</tr>
+        <!--<tr>
+			<td height="25" align="right" valign="bottom"></td>
+			<td height="25" align="right" valign="bottom"><a href="forgot_passwd.php">Forgot Password</a></td>
+		</tr>-->
+	</table>
+    </div> 
+    </form>
+
+  </div>
+ 
+ </div>
+ 
+ </div>
+</body>
+</html>
+  <center>
+<hr color="#12585E" width="100%" size="5"  align="center" style="margin-top:3px; margin-bottom:2px; clear:both;" /> 
+<div class="univfooter" align="center" style="padding-top:5px;"><font face="Trebuchet MS, Arial, Helvetica, sans-serif" color="#FFFFFF">Copyright &copy; 2022 University of Kerala. All Rights Reserved. For admission related queries mail to us : <font size="2"><b>onlineadmission@keralauniversity.ac.in</b></font><br />
+This site is best viewed in latest versions of Mozilla Firefox, Google Chrome etc.,</font></div>
+</center>
+</body>
+</html>
